@@ -33,6 +33,7 @@ public class StudentService {
         if (!storage.containsKey(id)) {
             throw new StudentNotFoundException();
         }
+        student.setId(id);
         storage.put(id, student);
         return student;
     }

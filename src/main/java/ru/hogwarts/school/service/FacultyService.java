@@ -31,6 +31,7 @@ public class FacultyService {
         if (!storage.containsKey(id)) {
             throw new FacultyNotFoundException();
         }
+        faculty.setId(id);
         storage.put(id, faculty);
         return faculty;
     }
